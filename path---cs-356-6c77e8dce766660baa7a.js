@@ -1,0 +1,2 @@
+webpackJsonp([0x67f327c90b4f],{"./node_modules/json-loader/index.js!./.cache/json/cs-356.json":function(e,t){e.exports={data:{site:{siteMetadata:{author:"Bartholomew Joyce"}},markdownRemark:{html:"<p>No lectures yet.</p>",excerpt:"No lectures yet.",frontmatter:{title:"CS356 Approximation and Randomised Algorithms",date:"October 03, 2017"}}},pathContext:{slug:"/cs356/"}}}});
+//# sourceMappingURL=path---cs-356-6c77e8dce766660baa7a.js.map
