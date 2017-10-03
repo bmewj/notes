@@ -1,0 +1,21 @@
+/* PT Mono */
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: normal;
+  src: 'PT Mono', url('../fonts/pt-mono.woff2') format('woff2');
+}
+
+/* Benton Sans */
+@font-face {
+  font-family: 'Benton Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/benton-sans-book.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Benton Sans';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/benton-sans-bold.woff2') format('woff2');
+}

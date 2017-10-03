@@ -1,0 +1,32 @@
+body, p {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Benton Sans';
+  margin: 0;
+  padding: 16px 0;
+}
+h2, h3 {
+  font-weight: normal;
+}
+
+div#sticky-header {
+  -webkit-transform: translate3d(0, 0, 0);
+  position: fixed;
+  min-width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  height: 0px;
+  background-color: #fff;
+}
+
+code {
+  font-family: 'PT Mono', monospace;
+}
+
+.main {
+  max-width: 7200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
