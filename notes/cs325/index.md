@@ -5,4 +5,8 @@ tags:
 - main
 ---
 
-No lectures yet.
+## Lecture 1
+*October 4th, 2017*
+
+Missed...
+

@@ -16,6 +16,7 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'remark-katex',
           {
             resolve: 'gatsby-remark-images',
             options: {

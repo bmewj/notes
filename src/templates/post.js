@@ -12,9 +12,9 @@ class PostRoute extends React.Component {
           title={post.frontmatter.title}
           meta={[{ name: "description", content: post.excerpt }]}
         />
-        <h1>
+        <h4>
           {post.frontmatter.title}
-        </h1>
+        </h4>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     )

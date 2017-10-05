@@ -20,6 +20,8 @@
     "gatsby-source-filesystem": "^1.4.12",
     "gatsby-transformer-remark": "^1.7.6",
     "gatsby-transformer-sharp": "^1.6.5",
-    "lodash": "^4.17.4"
+    "katex": "^0.8.3",
+    "lodash": "^4.17.4",
+    "remark-math": "^1.0.1"
   }
 }

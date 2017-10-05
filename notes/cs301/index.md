@@ -8,8 +8,9 @@ tags:
 ## Lecture 1
 *October 3rd, 2017*
 
-"`4 + 5 = ...`" is not an algorithmic problem.  
-"integer addition" is an algorithmic problem.
+"$4 + 5 = ...$" is not an algorithmic problem.  
+"*integer addition*" is an algorithmic problem.
 
-`{0,1}*` is the set of all binary string.
+$\{0,1\}^*$ is the set of all binary string.
 
+Formally, $f : \{0,1\}^* \times \{0,1\}^* \rightarrow \{0,1\}^*$.

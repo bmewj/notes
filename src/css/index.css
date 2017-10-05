@@ -6,8 +6,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Benton Sans';
   margin: 0;
   padding: 16px 0;
-}
-h2, h3 {
   font-weight: normal;
 }
 
@@ -29,4 +27,8 @@ code {
   max-width: 7200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.katex-display {
+  font-size: 1.2em;
 }
