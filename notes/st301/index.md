@@ -38,3 +38,9 @@ $$
 $$
 d^* := \mathrm{argmax}_{d \in D} \bar{R}(d)
 $$
+
+# Lecture 2
+*October 6th, 2017*
+
+Missed...
+

@@ -5,8 +5,13 @@ tags:
 - main
 ---
 
-## Lecture 1
+# Lecture 1
 *October 4th, 2017*
 
 Missed...
+
+# Lecture 2
+*October 6th, 2017*
+
+[Slides](./lexing.pdf)
 
