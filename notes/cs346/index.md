@@ -423,3 +423,276 @@ Attributes with uniqueness (key) constraints should have an index.
 `CREATE [ UNIQUE ] INDEX <index name> ON <table name> (<column name> [ <order>
   ] ) `
 
+#### **Lecture 8** – October 23rd, 2017
+
+## External Merge Sort
+
+1. For each block that fits in memory:
+   1. Read into disk as much as fits in memory.  
+   2. Sort it in memory.
+   3. Write it back.
+
+2. Read portions of each sorted block into memory and merge them.
+
+External merge sort:
+1. **`122225`**`-234445-11235`
+2. `122225-`**`234445`**`-11235`
+3. `122225-234445-`**`11235`**
+4. **`12`**`2225-`**`23`**`4445-`**`11`**`235`
+5. `12`**`22`**`25-23`**`44`**`45-11`**`23`**`5`
+6. `1222`**`25`**`-2344`**`45`**`-1123`**`5`**
+
+$3(b_r + b_s) + 1$
+
+## Sort-merge algorithm
+
+- Parameters of the sorting procedure:
+  - $b$: number of blocks in the file to be sorted
+  - $n_B$: available buffer space measured in blocks
+  - $n_R$: number of runs (chunks) of the file produced
+    - $n_R = \lceil b/n_B \rceil$
+
+- Small example: $b=1024$, $n_B=5$, need 205 runs of 5 blocks
+- After first pass, have $n_R$ sorted pieces of $n_B$ blocks: merge them
+  together.
+  - In-memory mergesort: merge two at a time (two-way merge)
+  - External sorting: merge as many as possible
+    - Limiting factor: smaller of $(n_B - 1)$ and $n_R$
+
+
+## Complicated SELECT operation
+
+Selecting on many indices simultaneously (where the indices are queries
+together with `AND` or `OR`).
+
+Get the pointers to the different blocks from the secondary indexes of all of
+the queries indices, then... intersect the pointers, *then* access the blocks.
+
+## Selectivity estimation
+
+Knowing the size of the result of a query without having to carry out the
+query.
+
+#### **Lecture 9** – October 26th, 2017
+
+## Hands-on projects
+
+1. **Data Warehousing**: SQL, OLAP, from RDBMS to DWs
+
+   - In a data warehouse we have a purpose (e.g. money or sales).
+   - You will take this normalised DB and will make it a fact-based or
+     subject-based table. You will drop some data. You will have a fact
+     table with information about sales, which may refer to secondary tables
+     with products, customers, or suppliers.
+   - Instructions given step by step: drop these tables, do this, do that...
+   - You can use MySQL, PostgreSQL, Oracle, but the queries are done for MS
+     SQL Server.
+   - OLAP: for example, "give me the no. of products sold in the second half
+     of this year in region A that weren't sold in the first half of this year
+     in region B."
+   - Challenge: data will be missing, e.g. holidays, but they will be queried.
+
+2. **Hadoop MapReduce**: Big Data hacking, text analytics
+
+   - You will be given a very big data set (and small one for testing). It
+     will consist of updates to wiki pages.
+   - Since it's big, you can't use basic C code (or maybe you can).
+   - Process this data to answer questions, e.g: "who was the most active user
+     on wikipedia"? Were they genuine edits or spam? Give the top $k$.
+   - Or: "what are the articles with the highest number of revisions?"
+   - Biggest challenge: install Hadoop. Get it running. There is a step-by-
+     step instruction paper on how to install it.
+
+3. **Column oriented data stores**: Column stores for analytics, bitmaps,
+   algorithms
+
+   - We care about aggregates (sums, avgs, analysis).
+   - Project is about storing columns in efficient way.
+   - Given any DB, how can I store data column-wise?
+   - Compression: most-famous one, round-length encoding.
+     `[6, 6, 6, 6, 6, 6, 6]` is turned into `6 x 7`, though that only works
+     if the column is compressed.
+   - It is assumed that the data is compressable. But that may not be the
+     case.
+   - In this project: sort data on one column so that there are sequences
+     of repetitions in the data.
+   - I will give you data, you will take the data and compress it, and I
+     will give you the compression codes.
+   - Don't spend too much time on details, spend time on creative solutions.
+   - Complex compression algorithm $\Rightarrow$ slow querying. You must
+     compress it such that querying is efficient.
+   - Problem: multiple columns, need to sort it in multidimensional way.
+   - Provided with 5 data sets, one with 2 million tuples.
+
+## Objectives
+
+- To get hands-on experience in one of the areas.
+- To do something timely, and that you find interesting and stimulating.
+- To let you pick something that reflects your interests.
+
+## Submission Details
+
+- Submission is via Tabula
+  - Upload a PDF of the report
+  - Upload a zip of the source code
+- Due **Monday 4th of December (12 noon)**
+  - Usual late scheme applies: loss of 5% of marks per working day late.
+  - Do make use of books/articles/websites, but cite them properly.
+  - Don't copy code.
+
+## Report Format
+
+- Report:
+  - Max 5 pages (at most 3500 words) for the main part of the report
+  - Appendix: for detailed query outputs if required by the project
+    description.
+- The main part:
+  - At least 10pt font, "sensible margins" (2cm on all sides)
+  - Some marks go to presentation.
+  - Ability to communicate is vital in whatever you go on to do
+  - Use graphs and diagrams where applicable.
+
+## Suggested Outline
+
+- Introduction
+- Description of what you did
+  - Describe the algorithms and implementations
+  - Enough detail to allow someone else to repeat the process
+  - Include what measures you will measure the methods on
+- Results
+  - Experimental evaluation
+  - "As the data size increases, I have a linear increase in cost, ..."
+  - For the column compressions project: "as the number of attributes
+    increases these methods start to perform worse, but as the number of rows
+    increases these methods become more stable."
+- Conclusions/references
+  - Include proper references to work you made use of
+  - What more could you have done if you had more time?
+
+## Evaluation Criteria
+
+- Quality of solutions and their evaluations [5%]
+- Quality of presentation [5%]
+- Quality of code, documentation, and instruction [4%]
+- Description of the work done and objectives [2%]
+- Framing material, references [2%]
+- Results and discussion/interpretation [4%]
+
+Report more important than the project. **Keep that in mind**.
+
+#### **Lecture 10** – October 27th, 2017
+
+## **Implementing JOIN**
+
+- **Sort-merge join**:
+
+  - If $R$ and $S$ are physically sorted (ordered) by value of the join
+    attributes $A$ and $B$, respectively, sort-merge join is very efficient.
+  - Both files are scanned in order of the join attributes, matching the
+    records that have the same values for $A$ and $B$.
+
+- **Hash join**:
+
+  - The records of $R$ and $S$ are both hashed with the *same hash function*
+    on the join attributes $A$ of $R$ and $B$ of $S$ as hash keys.
+  - Hash join is very efficient if one of the sets fits into memory.
+    Otherwise, bring as much as you can into memory, hash them, write back.
+    Then read in the hashed data and join them.
+  - Cost if files don't fit into memory: 3 times as many IOs.
+  - Assumed: your hash function behaves nicely, splits data in uniform
+    buckets.
+
+![Hash join](lecture-10-hash-join.png)
+
+## **JOIN performance**
+
+- Nested-loop join can be very expensive
+
+- Joining EMPLOYEE and DEPARTMENT, with EMPLOYEE for the outer loop:  
+  EMPLOYEE read once, DEPARTMENT read $b_E/(n_B-2)$ times.
+  - Read EMPLOYEE once: $b_E$ blocks
+  - Read DEPARTMENT $\lceil b_E/(n_B-2)\rceil$ times: $b_D\times b_E/(n_B-2)$
+  - In our examples: $2000+10\times 2000/5=6000$ block reads.
+- Joining EMPLOYEE and DEPARTMENT, with DEPARTMENT for the outer loop:  
+  EMPLOYEE read once, DEPARTMENT read $b_E/(n_B-2)$ times.
+  - Read DEPARTMENT once: $b_D$ blocks
+  - Read EMPLOYEE $\lceil b_D/(n_B-2)\rceil$ times: $b_E\times b_D/(n_B-2)$
+  - In our examples: $10+2000\times 10/5=4010$ block reads.
+
+## **JOIN selection factor**
+
+## **Sort-merge JOIN efficiency**
+
+## **Partition hash JOIN**
+
+## **PROJECT operation**
+
+## **SET operation**
+
+- Other operations: UNION, INTERSECTION, SET DIFFERENCE. These are easy.
+  Sort the data, run the operation.
+
+## **Aggregate operation**
+
+- Aggregates: MIN, MAX, COUNT, AVERAGE, SUM. Keep track of these values and
+  update the aggregates on insertion and updates.
+
+## **GROUP BY**
+
+- `SELECT Dno, AVG(Salary) FROM EMPLOYEE GROUP BY Dno`  
+  Apply the aggregate separately to each group of tuples
+
+## **Avoid hitting the disk: pipelining**
+
+- It is convenient to think of each operation in isolation.
+  - Read input from disk, write results to disk.
+
+- However, this is very slow: very disk intensive.
+
+- Use pipelining: pass results of one operator directly to the next, like
+  unix pipes `FIRST QUERY | SECOND QUERY`
+
+## Example
+
+`SELECT B,D FROM R,S WHERE R.A = "c" AND S.E = 2 AND R.C = S.C`
+
+**How do we execute query?**
+
+**Plan I**: Cartesian product, then selection (may be a large cartesian product)
+
+**Plan II**: Take first table, do a selection, take second table, do a selection,
+then join.
+
+## **Transformation rules for relational algebra**
+
+1. Cascade of $\sigma$. Conjunction of selections can be broken up:  
+   $\sigma_{c1} \text{ AND } _{c2} \text{ AND } ... _{cn} (R) = sc1 (sc2 (....scn (R))...))$
+
+2. The s operation is commutative (follows from previous) sc1 (sc2(R)) o sc2 (sc1(R))
+3. Cascade of p. Can ignore all but the final projection:
+plist1(plist2(...(plistn(R)...)) o plist1(R)
+4. Commuting s with p. If selection only involves attributes in
+the projection list, can swap
+81
+pA1, A2, ... , An(sc(R)) o sc(pA1, A2, ... , An (R)) CS346 Advanced Databases
+ Transformation rules for relational algebra
+5. Commutativity of ⋈ (and  ́): Join (cartesian product) commutes R⋈cS=S⋈c R and R ́S=S ́R
+6. Commuting s with ⋈ (or  ́):
+If all attributes in selection condition c are in only one relation (say, R) then sc( R⋈S ) o (sc(R))⋈S
+Ifccanbewrittenas(c1 ANDc2)wherec1 isonlyonR,andc2 is only on S, then sc( R ⋈ S ) o (sc1(R)) ⋈ (sc2(S))
+7. Commuting p with ⋈ ( ́): Write projection list L={A1...An,B1... Bn} where A’s are attributes of R, B’s are attributes of S.
+If join condition c involves only attributes in L, then:
+pL(R ⋈c S) o ( pA1,...An(R)) ⋈c (pB1,...Bn(S))
+Can also allow join on attributes not in L with an extra projection
+82
+CS346 Advanced Databases
+Transformation rules for relational algebra
+8. Commutativity of set operators
+Operations È and Ç are commutative ( / is not)
+9. Associativity of ⋈,  ́, È, Ç
+These operations are individually associative:
+(R q S) q T = R q (S q T) where q is the same op throughout
+10. Commuting s with set operations scommuteswithÈ,Çand/:sc (rqS)o(sc(R))q(sc(S))
+11. The p operation commutes with È: pL(R È S) o (pL(R)) È (pL(S))
+12. Converting a (s,  ́) sequence into a ⋈
+If the condition c of selection s following a  ́ corresponds to a join condition, then: (sc(R  ́ S)) o (R ⋈c S)

@@ -6,6 +6,37 @@
   src: 'PT Mono', url('../fonts/pt-mono.woff2') format('woff2');
 }
 
+/* Plantin */
+@font-face {
+  font-family: 'Plantin';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/plantin.woff') format('woff'),
+       url('../fonts/plantin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plantin';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/plantin-bold.woff') format('woff'),
+       url('../fonts/plantin-bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plantin';
+  font-style: italic;
+  font-weight: normal;
+  src: url('../fonts/plantin-italic.woff') format('woff'),
+       url('../fonts/plantin-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plantin';
+  font-style: italic;
+  font-weight: bold;
+  src: url('../fonts/plantin-bold-italic.woff') format('woff'),
+       url('../fonts/plantin-bold-italic.woff2') format('woff2');
+}
+
+
 /* Benton Sans */
 @font-face {
   font-family: 'Benton Sans';
