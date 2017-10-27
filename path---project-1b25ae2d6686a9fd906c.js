@@ -1,0 +1,2 @@
+webpackJsonp([82289178807862],{"./node_modules/json-loader/index.js!./.cache/json/project.json":function(e,t){e.exports={data:{site:{siteMetadata:{author:"Bartholomew Joyce"}},markdownRemark:{html:'<ul>\n<li><a href="spec/">Project Specification</a></li>\n</ul>',excerpt:"Project Specification",frontmatter:{title:"Third Year Project",date:"October 03, 2017"}}},pathContext:{slug:"/project/"}}}});
+//# sourceMappingURL=path---project-1b25ae2d6686a9fd906c.js.map

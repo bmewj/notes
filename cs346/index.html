@@ -1,15 +1,14 @@
 <!DOCTYPE html>
- <html lang="en"><head><meta charSet="utf-8" /><meta httpEquiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="preload" href="/component---src-layouts-index-js-94b2668044ac8de2feaf.js" as="script" /><link rel="preload" href="/component---src-templates-post-js-f11b9c4a042153a3ab99.js" as="script" /><link rel="preload" href="/path---cs-346-111f395ee57b32a3b79a.js" as="script" /><link rel="preload" href="/app-fff8d1a132829e9f40b0.js" as="script" /><link rel="preload" href="/commons-53fb0be53ed5caeb5d53.js" as="script" /><script id="webpack-manifest">
+ <html lang="en"><head><meta charSet="utf-8" /><meta httpEquiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="preload" href="/component---src-layouts-index-js-94b2668044ac8de2feaf.js" as="script" /><link rel="preload" href="/component---src-templates-post-js-f11b9c4a042153a3ab99.js" as="script" /><link rel="preload" href="/path---cs-346-3d854567705df8d1ff35.js" as="script" /><link rel="preload" href="/app-3ea84766c7d3a5553080.js" as="script" /><link rel="preload" href="/commons-53fb0be53ed5caeb5d53.js" as="script" /><script id="webpack-manifest">
             //<![CDATA[
-            window.webpackManifest = {"231608221292675":"app-fff8d1a132829e9f40b0.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-2b47fdff36c5405a8480.js","195351340454287":"component---src-templates-post-js-f11b9c4a042153a3ab99.js","60335399758886":"path----35d3519705bdcd4a2f23.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","81904240485990":"path---cs-342-b0fced303a19d7bbc13b.js","257411701174131":"path---cs-346-111f395ee57b32a3b79a.js","74901329180841":"path---cs-325-b152b4fb2895acad5a56.js","252209533791401":"path---st-301-421b3da8a072f2309012.js","168273874657437":"path---cs-301-621cf1a456f8f3373bbf.js","114294042200911":"path---cs-356-6c77e8dce766660baa7a.js","114276838955818":"component---src-layouts-index-js-94b2668044ac8de2feaf.js"}
+            window.webpackManifest = {"231608221292675":"app-3ea84766c7d3a5553080.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-2b47fdff36c5405a8480.js","195351340454287":"component---src-templates-post-js-f11b9c4a042153a3ab99.js","60335399758886":"path----35d3519705bdcd4a2f23.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","81904240485990":"path---cs-342-b0fced303a19d7bbc13b.js","257411701174131":"path---cs-346-3d854567705df8d1ff35.js","74901329180841":"path---cs-325-05a2f40985d6934b9221.js","252209533791401":"path---st-301-421b3da8a072f2309012.js","168273874657437":"path---cs-301-621cf1a456f8f3373bbf.js","114294042200911":"path---cs-356-6c77e8dce766660baa7a.js","152063887477752":"path---project-spec-4c40c5ac5373c592475a.js","82289178807862":"path---project-1b25ae2d6686a9fd906c.js","114276838955818":"component---src-layouts-index-js-94b2668044ac8de2feaf.js"}
             //]]>
-            </script><title data-react-helmet>CS346 Advanced Databases | Notes</title><link data-react-helmet rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css" integrity="sha384-B41nY7vEWuDrE9Mr+J2nBL0Liu+nl/rBXTdpQal730oTHdlrlXHzYMOhDU60cwde" crossorigin="anonymous" /><meta data-react-helmet name="description" content="Lecture 1 October 5th, 2017 Significant part of the module: the back-end of databases. Other part: recent
-development in db tech. In other…" /><script data-react-helmet src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js" integrity="sha384-L9gv4ooDLrYwW0QCM6zY3EKSSPrsuUncpx26+erN0pJX4wv1B1FzVW1SvpcJPx/8" crossorigin="anonymous"></script><script>
+            </script><title data-react-helmet>CS346 Advanced Databases | Notes</title><link data-react-helmet rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css" integrity="sha384-B41nY7vEWuDrE9Mr+J2nBL0Liu+nl/rBXTdpQal730oTHdlrlXHzYMOhDU60cwde" crossorigin="anonymous" /><meta data-react-helmet name="description" content="Lecture 1  – October 5th, 2017 Significant part of the module: the back-end of databases. Other part: recent
+development in db tech. In…" /><script data-react-helmet src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js" integrity="sha384-L9gv4ooDLrYwW0QCM6zY3EKSSPrsuUncpx26+erN0pJX4wv1B1FzVW1SvpcJPx/8" crossorigin="anonymous"></script><script>
   !function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",[
-  "/commons-53fb0be53ed5caeb5d53.js","/app-fff8d1a132829e9f40b0.js","/path---cs-346-111f395ee57b32a3b79a.js","/component---src-templates-post-js-f11b9c4a042153a3ab99.js","/component---src-layouts-index-js-94b2668044ac8de2feaf.js"
+  "/commons-53fb0be53ed5caeb5d53.js","/app-3ea84766c7d3a5553080.js","/path---cs-346-3d854567705df8d1ff35.js","/component---src-templates-post-js-f11b9c4a042153a3ab99.js","/component---src-layouts-index-js-94b2668044ac8de2feaf.js"
 ])
-  </script><style id="gatsby-inlined-css">.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.namespace{opacity:.7}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers{padding-left:0}pre[class*=language-].line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}@font-face{font-family:PT Mono;font-style:normal;font-weight:400;src:"PT Mono",url(/static/pt-mono.9423a5ee.woff2) format("woff2")}@font-face{font-family:Benton Sans;font-style:normal;font-weight:400;src:url(/static/benton-sans-book.240cae2e.woff2) format("woff2")}@font-face{font-family:Benton Sans;font-style:normal;font-weight:700;src:url(/static/benton-sans-bold.ee689461.woff2) format("woff2")}body,p{font-family:Helvetica Neue,Helvetica,sans-serif}h1,h2,h3,h4,h5,h6{font-family:Benton Sans;margin:0;padding:16px 0;font-weight:400}div#sticky-header{-webkit-transform:translateZ(0);position:fixed;min-width:100%;z-index:1000;overflow:hidden;height:0;background-color:#fff}code{font-family:PT Mono,monospace}.main{max-width:7200px;margin:0 auto;padding:0 20px}.katex-display{font-size:1.2em}</style></head><body><div id="___gatsby"><div class="main"><div id="sticky-header"></div><div><h4>CS346 Advanced Databases</h4><div><h1>Lecture 1</h1>
-<p><em>October 5th, 2017</em></p>
+  </script><style id="gatsby-inlined-css">.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.namespace{opacity:.7}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers{padding-left:0}pre[class*=language-].line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}@font-face{font-family:PT Mono;font-style:normal;font-weight:400;src:"PT Mono",url(/static/pt-mono.9423a5ee.woff2) format("woff2")}@font-face{font-family:Plantin;font-style:normal;font-weight:400;src:url(/static/plantin.8ee3edfc.woff) format("woff"),url(/static/plantin.a97b6ae6.woff2) format("woff2")}@font-face{font-family:Plantin;font-style:normal;font-weight:700;src:url(/static/plantin-bold.daf38c6f.woff) format("woff"),url(/static/plantin-bold.969598bb.woff2) format("woff2")}@font-face{font-family:Plantin;font-style:italic;font-weight:400;src:url(/static/plantin-italic.760a46fb.woff) format("woff"),url(/static/plantin-italic.3d4e41ba.woff2) format("woff2")}@font-face{font-family:Plantin;font-style:italic;font-weight:700;src:url(/static/plantin-bold-italic.9b849da4.woff) format("woff"),url(/static/plantin-bold-italic.5326000f.woff2) format("woff2")}@font-face{font-family:Benton Sans;font-style:normal;font-weight:400;src:url(/static/benton-sans-book.240cae2e.woff2) format("woff2")}@font-face{font-family:Benton Sans;font-style:normal;font-weight:700;src:url(/static/benton-sans-bold.ee689461.woff2) format("woff2")}body,p{font-family:Plantin,serif}h1,h2,h3,h4,h5,h6{font-family:Helvetica Neue,Helvetica,sans-serif;margin:0;padding:16px 0;font-weight:400}div#sticky-header{-webkit-transform:translateZ(0);position:fixed;min-width:100%;z-index:1000;overflow:hidden;height:0;background-color:#fff}code{font-family:PT Mono,monospace}.main{max-width:7200px;margin:0 auto;padding:0 20px;margin-bottom:600px}.katex-display{font-size:1.2em}</style></head><body><div id="___gatsby"><div class="main"><div id="sticky-header"></div><div><h4>CS346 Advanced Databases</h4><div><h4><strong>Lecture 1</strong> – October 5th, 2017</h4>
 <p>Significant part of the module: the back-end of databases. Other part: recent
 development in db tech.</p>
 <p>In other words: 60% is data structures, 40% is operating systems.</p>
@@ -35,9 +34,8 @@ The back-end. How do you provide for the application guys from CS258?</p>
 <li>OLAP: Can I change this relational model to make it more fit for analysis?</li>
 <li>Teradata: data warehousing company.</li>
 </ul>
-<h1>Lecture 2</h1>
-<p><em>October 6th, 2017</em></p>
-<h3>Why use RDBMS</h3>
+<h4><strong>Lecture 2</strong> – October 6th, 2017</h4>
+<h2>Why use RDBMS</h2>
 <ul>
 <li>
 <p><strong>Controlling redundancy</strong><br>
@@ -64,9 +62,9 @@ Use the same language for querying irrespective of the underlying
 database technology.</p>
 </li>
 </ul>
-<h3>When <em>not</em> to use a RDBMS?</h3>
+<h2>When <em>not</em> to use a RDBMS?</h2>
 <p>Small dataset, model doesn’t change often, simple application.</p>
-<h2><strong>Relational databases</strong></h2>
+<h1><strong>Relational databases</strong></h1>
 <ul>
 <li>
 <p>Relational model</p>
@@ -84,7 +82,7 @@ database technology.</p>
 </ul>
 </li>
 </ul>
-<h3>Keys</h3>
+<h2>Keys</h2>
 <ul>
 <li>
 <p>A relation is a <strong>set</strong> of tuples. All elements of a set are distinct.</p>
@@ -113,7 +111,7 @@ Such a set is called a <strong><em>superkey</em></strong>.</p>
 <p>A <strong><em>primary key</em></strong> is one <em>arbitrarily chosen candidate key</em>.</p>
 </li>
 </ul>
-<h3>Integrity Rules</h3>
+<h2>Integrity Rules</h2>
 <ul>
 <li>
 <p><strong>Domain contrainsts</strong> A data type for each item.</p>
@@ -127,10 +125,10 @@ if a row has a non-null value as the column, it MUST exist in the foreign
 table.</p>
 </li>
 </ul>
-<h3>Normalize</h3>
+<h2>Normalize</h2>
 <p>(…show tables from slides)</p>
-<h2><strong>Storage, Files, and Indexing</strong></h2>
-<h3>Outline</h3>
+<h1><strong>Storage, Files, and Indexing</strong></h1>
+<h2>Outline</h2>
 <p><strong>Part 1</strong></p>
 <ul>
 <li>
@@ -146,12 +144,12 @@ table.</p>
 <p>Chapter: “Dist Storage, Basic File Structures and Hashing”</p>
 </li>
 </ul>
-<h3>Why?</h3>
+<h2>Why?</h2>
 <p>Locality: similar objects in the same block
 Parallelism: if there are too many objects to fit in one block, spread them
 over many servers, clustered in the same block within each server.</p>
 <p>Bottom-up perspective on data management.</p>
-<h3>Data on Disks</h3>
+<h2>Data on Disks</h2>
 <ul>
 <li>
 <p>Databases ultimately rely on non-volatile disk storage</p>
@@ -172,7 +170,7 @@ over many servers, clustered in the same block within each server.</p>
 </ul>
 </li>
 </ul>
-<h3>Rotating Disk</h3>
+<h2>Rotating Disk</h2>
 <ul>
 <li>
 <p>Seeking means waiting for your sector of data to come round to the reading
@@ -209,7 +207,7 @@ write to disk.</li>
 </ul>
 </li>
 </ul>
-<h3>Records: the basic unit of the database</h3>
+<h2>Records: the basic unit of the database</h2>
 <ul>
 <li>
 <p>DBs fundamentally composed of records</p>
@@ -236,4 +234,719 @@ write to disk.</li>
 <li>How to effectively search through data with variable length records?</li>
 </ul>
 </li>
-</ul></div></div></div></div></body></html>
+</ul>
+<h4><strong>Lecture 3</strong> – October 9th, 2017</h4>
+<h2>Records and Blocks</h2>
+<ul>
+<li>Records get stored on disks organized into blocks</li>
+<li>
+<p>Small records: pack an integer number into each block</p>
+<ul>
+<li>Leaves some space left over in blocks</li>
+<li>Blocking Factor: (average) number of records per block</li>
+</ul>
+</li>
+<li>
+<p>Large records: may not be effective to leave slack</p>
+<ul>
+<li>Records may span across multiple blocks (spanned organization)</li>
+<li>May use a pointer at end of block to point to next block</li>
+</ul>
+</li>
+</ul>
+<h2>File Organization</h2>
+<ul>
+<li>
+<p>File: Sequence of records</p>
+<ul>
+<li>Fixed-length vs. variable-length records</li>
+</ul>
+</li>
+<li>
+<p>Records are stored to disk blocks</p>
+<ul>
+<li>Spanned vs. unspanned</li>
+</ul>
+</li>
+<li>
+<p>Blocks are allocated to disk</p>
+<ul>
+<li>Contiguous vs. Linked allocation</li>
+</ul>
+</li>
+<li>
+<p>File Organization</p>
+<ul>
+<li>Unordered</li>
+<li>Ordered</li>
+<li>Hashing</li>
+</ul>
+</li>
+</ul>
+<h3>Unordered Files</h3>
+<ul>
+<li>Just dump the records on disk in no particular order</li>
+<li>Insert is very efficent: just add to last block</li>
+<li>
+<p>Scan is very inefficient: need to do a linear search.</p>
+<ul>
+<li>Approx. read half the file on average</li>
+</ul>
+</li>
+<li>Delete could be inefficient</li>
+</ul>
+<h3>Ordered Files</h3>
+<ul>
+<li>Keep records ordered on some (key) value</li>
+</ul>
+<h3>Hashing Files</h3>
+<ul>
+<li>
+<p>Use hashing to ensure records with same key are grouped together</p>
+</li>
+<li>
+<p>Arrange file blocks into M equal sized buckets</p>
+<ul>
+<li>Often, 1 block = 1 bucket</li>
+</ul>
+</li>
+<li>
+<p>Usual hash table concerns emerge</p>
+<ul>
+<li>How to deal with collisions?</li>
+<li>Deletions also get messy</li>
+</ul>
+</li>
+<li>
+<p><strong>External hashing</strong>: don’t store records directly in buckets, store
+pointers to records.</p>
+<ul>
+<li>Pointers are small, fit more in a block</li>
+<li>“All problems in computer science can be solved by another level
+of indirection” – <em>David Wheeler</em></li>
+</ul>
+</li>
+</ul>
+<h3>External Hashing for Disk Files</h3>
+<ul>
+<li><strong>Bucket</strong>: One disk block or cluster of contiguous blocks (like
+fixed-size chaining)</li>
+<li>Hashing maps a key to a bucket number (which is then mapped to a
+physical block)</li>
+</ul>
+<h3>Dynamic Hashing</h3>
+<ul>
+<li>Static hashing: hash address space is fixed.</li>
+<li>Dynamic hashing: Expand and shrink the hash space.</li>
+</ul>
+<h3>Extendible Hashing</h3>
+<p>For a table of size 2: use most significant bit for hash.</p>
+<p><strong>TODO</strong>: This is complicated. Write out a full description for this later.</p>
+<h4><strong>Lecture 4</strong> – October 12th, 2017</h4>
+<p><strong>Points to Note</strong></p>
+<ul>
+<li>
+<p>Does the order of insertion matter?<br>
+Not in this case. But in most cases we are inserting multiple rows at a time
+anyway. This is called <strong>bulk loading</strong>, where you find a way to efficiently
+insert reams of data instead of inserting tuples one by one.</p>
+</li>
+<li>
+<p>Bucket split causes directory doubling</p>
+<ul>
+<li>If local depth becomes > global depth</li>
+</ul>
+</li>
+</ul>
+<h3>Linear Hashing: Example</h3>
+<h1><strong>Indexing</strong></h1>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/44b7054f33d969557fdb599a0be61077-254ad.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 382px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 116.49214659685863%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAACV0lEQVQ4y5WVC3OqQAyF/f8/sCq1tzwVUVDw/czNtxi6OHac7syZCGzOJjnJOjgcDhJFkVRVJe/W9XqVVbWS2+32654BhHEcS5qmMp/PZTqdOrter4Vv/oqjWCaTieR5LkmSShhGzhckceLeD3yH+/3u4K/dbifH41E2TSPBeCzj0ag7lGixDrk+r1Z9wlcLMlv5LJdplklRFLJcLqUqS2cNfyKkbnNNiejMudGosYbNZvOekFru93vnHIwDCYLA1QzSuq57EbL3LSFOtrI007RnWrvKdQUE/DbU6/qHEDFKrcm/ry9VLJbtdtsRnk4nJ0qs7RV+fztbqBDsp56GXg3P53OnqK82hFbHmUaHKKQPOJSDOvg1hJDTCduK/EyYKVmq/UdkgG/22547wjAMZfgxdErykQamLaqycpE0jz7k/UyVXiwWrShqDT1R0iSRT1WQtoCQaNlgSlICiBCF1BGFLKqHQCZSR0g6Y42AloAw0QOoiauTWsaQwwBjaim2WbRo6uaHkCjYXMwLt5G5hIRUiY4akzK9yEzzvVyWzho45E+jR2S0FPWCjJR9UdavRu/5aqIHmRSiJgOuOi6DNsW6V0OyGby6835bNDOClFoeakvfYn28TdlfkKE0QFEiwhq2fmNTK4AQWNK0aUEQa5+FjhjORPeMo/oO/FsFJ06FlIIbud3cmYqCwtY2+PRE8fuQdGhs0qHACGCECMPiHSozz+whgN5t44/e+eFk63K5dClDyGbuwtFw6P4//NFbPNCLECcfduv0RGFSNLr2/8Tuw1UHnv8DyRjmhJ0BovEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Index"
+        title=""
+        src="/static/44b7054f33d969557fdb599a0be61077-7f1eb.png"
+        srcset="/static/44b7054f33d969557fdb599a0be61077-54db7.png 148w,
+/static/44b7054f33d969557fdb599a0be61077-fa24e.png 295w,
+/static/44b7054f33d969557fdb599a0be61077-7f1eb.png 590w,
+/static/44b7054f33d969557fdb599a0be61077-254ad.png 764w"
+        sizes="(max-width: 382px) 100vw, 382px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p><strong>Aims</strong></p>
+<ul>
+<li>Generate a smaller file, by having an index of an index.</li>
+</ul>
+<h2>Primary Index</h2>
+<p>Can be <strong>dense</strong> or <strong>sparse</strong>. A sparse index has only a selection of tuples
+with which you can find the other tuples.</p>
+<ul>
+<li>
+<p>Single-level Ordered Indexes</p>
+<ul>
+<li>Primary Indexes</li>
+<li>Clustering Indexes</li>
+<li>Secondary Indexes</li>
+</ul>
+</li>
+<li>
+<p>Multilevel Indexes</p>
+</li>
+<li>
+<p>Dynamic Multilevel Indexes</p>
+<ul>
+<li>B-Trees, B+-Trees</li>
+</ul>
+</li>
+<li>
+<p>Indexes on Multiple Keys</p>
+</li>
+</ul>
+<p>To allow insertions you need to leave empty space in buckets. However, less
+entries in each block means you have more IO operations.</p>
+<p>Another alternative is <strong>overflow</strong>. If a block is full, have a chain to a
+secondary block instead of shifting all data along blocks. Overnight you can
+run through the data and rebuild an index.</p>
+<p>Or you can keep an insertion table (in memory). Don’t insert tuples into the
+index immediately. Once in a while you can bulk insert the tuples into the
+index and rebuild the index.</p>
+<p>Most the time you don’t want to reorganise the index. If you delete “Bob
+Alfred”, mark it as deleted instead of removing from the index.</p>
+<h2>Clustering Index</h2>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/7669b8b02397f8ec6f42a2e85beb0f85-6f53c.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 547px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 102.92504570383912%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB9ElEQVQ4y42UiXLCMAxE8/9/CNOEAsPRnOTiBtVPsdzQDoXMKLIce70rK4rkzedyuUjbtnI4HDTOskzSNP2zLnoXsCxLmUwmsl6vpSgKKfJCPcB5noe5l4D7/V6ZzedzSZJEkjiR+efPOI5jjeOPWOOXgE3TSNu00vd9sNPppIdgxGcf418Cdl2nng3I3lW7MB7iSrq20zH+AfB2u2ny7/f7AyDx8XhU+VyKjX/H+ABYuZPIE4lfLBbSd73Ok2xkdY7VbjewY2NT12oW1278AHi9XpUJxjjcblEOkl0uuU0OhnXpDsLGMT6yGps6ZjN3c5w4nU4DqAEiCZZsgrFdyjjGR7a4dnKgzAerL1gh06SSeCtuJNbPJDOJHCbxgCFFk90PyQZUC9ivy9IsFLXFeAXkRANQhh7UGCD/fD6rEmqQMWuxkzOL8YHhdrsNDDebjaRfXw/5QS5zgWE2MBzHgSGXYifAAGPOaozHNgHc+BvHNK8+xv/7p4wBOQS2djDf7LvFQfKz5+g3Ib1yTPJs6CqWGusyFgfJTwE9Ox7YsVnL5FXZvAMYmoOvSaoCG8f4t3JIuWgDdUZ34VIAr3y3GRd9xGKaJKVi/zJdxzqOedaVXvK/fwqv5XKptlqtZDabaTemLmGCFMuhlozbyNh+yXoU478BVMBYss+uetkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Clustering"
+        title=""
+        src="/static/7669b8b02397f8ec6f42a2e85beb0f85-a566e.png"
+        srcset="/static/7669b8b02397f8ec6f42a2e85beb0f85-d1e32.png 148w,
+/static/7669b8b02397f8ec6f42a2e85beb0f85-c5651.png 295w,
+/static/7669b8b02397f8ec6f42a2e85beb0f85-a566e.png 590w,
+/static/7669b8b02397f8ec6f42a2e85beb0f85-c38e6.png 885w,
+/static/7669b8b02397f8ec6f42a2e85beb0f85-6f53c.png 1094w"
+        sizes="(max-width: 547px) 100vw, 547px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<ul>
+<li>Insertion is a challenger in the previous version.</li>
+<li>Cluster index where each distinct value is allocated a whole disk block</li>
+<li>Linked list if more than one block is needed</li>
+<li>Easier to update file with inserts/deletes</li>
+</ul>
+<h2>Secondary indexes</h2>
+<ul>
+<li>Secondary indexes provide a <strong>secondary</strong> means of access to data</li>
+</ul>
+<p>These are dense indexes with references to blocks. Not good for insertions,
+deletions. But extremely good for existence queries (0 IO operations to figure
+out if <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">x</span></span></span></span> is in your table.)</p>
+<h2>Indexes on non-key columns</h2>
+<ul>
+<li>Keep multiple entries for the same value in the index</li>
+<li>One entry per value, points to block of pointers that point to all the rows
+with that value.</li>
+</ul>
+<h2>Two-level index / Multi-level indexing</h2>
+<p>Bottom-up perspective: we have a big file, we want to search the file. So we
+need an index that’s sorted, and we want to navigate that index quickly. So we
+build an index of the index, and we end up with a tree.</p>
+<h4><strong>Lecture 5</strong> – October 13th, 2017</h4>
+<p>Missed…</p>
+<h4><strong>Lecture 6</strong> – October 13th, 2017</h4>
+<p>Made no notes…</p>
+<h4><strong>Lecture 7</strong> – October 19th, 2017</h4>
+<h2>Bulk insertion</h2>
+<p>Insertion order is important in B+ trees. What if the data to be inserted is
+sorted? What will the tree look like at the end? When you insert your data in
+order you end up with a B+ tree that is very empty (minimally empty in fact).</p>
+<p>This can be resolved by calling a <code>sorted_bulk_insert()</code> function instead
+of a regular <code>insert()</code> for each tuple.</p>
+<p>For bulk insertion, when you split, don’t split the bucket in half. Instead
+only bring the greatest element to the new bucket and leave the old bucket
+full. This is referred to as <strong>bulk loading</strong>.</p>
+<p>Level: 3<br>
+Max-capacity: 11  </p>
+<p>Best case:</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>1</mn></mrow><annotation encoding="application/x-tex">11</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">1</span><span class="mord mathrm">1</span></span></span></span> pointers for root</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>1</mn></mrow><annotation encoding="application/x-tex">11</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">1</span><span class="mord mathrm">1</span></span></span></span> pointers for nodes in second level</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">1</span><span class="mord mathrm">0</span></span></span></span> keys for leaf nodes</li>
+</ul>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>1</mn><mo>×</mo><mn>1</mn><mn>1</mn><mo>×</mo><mn>1</mn><mn>0</mn><mo>=</mo><mn>1</mn><mn>2</mn><mn>1</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">11\times 11\times 10=1210</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span></span></span></span></p>
+<p>Worst case:</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">2</span></span></span></span> pointers for root</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">6</span></span></span></span> pointers for nodes in second level</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">5</span></span></span></span> keys for leaf nodes</li>
+</ul>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>×</mo><mn>6</mn><mo>×</mo><mn>5</mn><mo>=</mo><mn>6</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">2\times 6\times 5=60</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord mathrm">2</span><span class="mbin">×</span><span class="mord mathrm">6</span><span class="mbin">×</span><span class="mord mathrm">5</span><span class="mrel">=</span><span class="mord mathrm">6</span><span class="mord mathrm">0</span></span></span></span></p>
+<h2>Data Storage</h2>
+<p><strong>Tuning</strong> tweaking the performance of a query.</p>
+<p>Make sure disk speeds are all the same, or be considerate of slower disks.</p>
+<p>Handle disk addition and disk removal without turning off the </p>
+<p>Policy constraints</p>
+<ul>
+<li>Duplicate the data in countries that are allowed (w.r.t. data privacy).</li>
+</ul>
+<p>Replace cross-data centers</p>
+<ul>
+<li>Always have three different copies of data in separate locations of data
+centre.</li>
+</ul>
+<p>The ideal parallelism for a single query is</p>
+<ul>
+<li>Minimal number of parallel scanning servers needed to satisfy the client.</li>
+</ul>
+<p>Concurrent queries</p>
+<ul>
+<li>Maximizing parallelism for all of them can cause disk contention, reducing
+everybody’s performance.</li>
+</ul>
+<p>The goal in data centres is: reach maximal parallelism while minimizing
+concurrency issues.</p>
+<h1><strong>Tuning</strong></h1>
+<p><strong>Tuning</strong> tweaking the performance of a query.</p>
+<p>Retrieval queries:</p>
+<ol>
+<li>Which files are accessed by the query?</li>
+<li>Which attributes is selection applied to?</li>
+<li>Is the selection equality, inequality or range?</li>
+<li>Which attributes are subjects of join conditions?</li>
+<li>Which attributes are retrieved by the query?</li>
+</ol>
+<p>Update transactions:</p>
+<ol>
+<li>The files that will be updated</li>
+<li>The type of operation on each file (insert, modify, delete)</li>
+<li>The attributes for selection of a record to delete/modify</li>
+<li>The attributes whose values will be changed by a modify</li>
+</ol>
+<p>Third one is most important.
+Need to build an index on attributes from 3, need to avoid index on attributes
+from 4, since they change often.</p>
+<p>Building an index makes sense in most cases, but you shouldn’t have them for
+some attributes. For example, for attributes that are modified often.</p>
+<p>Attributes with uniqueness (key) constraints should have an index.</p>
+<p><code>CREATE [ UNIQUE ] INDEX &#x3C;index name> ON &#x3C;table name> (&#x3C;column name> [ &#x3C;order> ] )</code></p>
+<h4><strong>Lecture 8</strong> – October 23rd, 2017</h4>
+<h2>External Merge Sort</h2>
+<ol>
+<li>
+<p>For each block that fits in memory:</p>
+<ol>
+<li>Read into disk as much as fits in memory.  </li>
+<li>Sort it in memory.</li>
+<li>Write it back.</li>
+</ol>
+</li>
+<li>
+<p>Read portions of each sorted block into memory and merge them.</p>
+</li>
+</ol>
+<p>External merge sort:</p>
+<ol>
+<li><strong><code>122225</code></strong><code>-234445-11235</code></li>
+<li><code>122225-</code><strong><code>234445</code></strong><code>-11235</code></li>
+<li><code>122225-234445-</code><strong><code>11235</code></strong></li>
+<li><strong><code>12</code></strong><code>2225-</code><strong><code>23</code></strong><code>4445-</code><strong><code>11</code></strong><code>235</code></li>
+<li><code>12</code><strong><code>22</code></strong><code>25-23</code><strong><code>44</code></strong><code>45-11</code><strong><code>23</code></strong><code>5</code></li>
+<li><code>1222</code><strong><code>25</code></strong><code>-2344</code><strong><code>45</code></strong><code>-1123</code><strong><code>5</code></strong></li>
+</ol>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>(</mo><msub><mi>b</mi><mi>r</mi></msub><mo>+</mo><msub><mi>b</mi><mi>s</mi></msub><mo>)</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3(b_r + b_s) + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathrm">3</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord mathrm">1</span></span></span></span></p>
+<h2>Sort-merge algorithm</h2>
+<ul>
+<li>
+<p>Parameters of the sorting procedure:</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">b</span></span></span></span>: number of blocks in the file to be sorted</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">n_B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>: available buffer space measured in blocks</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">n_R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span>: number of runs (chunks) of the file produced</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>R</mi></msub><mo>=</mo><mo>⌈</mo><mi>b</mi><mi mathvariant="normal">/</mi><msub><mi>n</mi><mi>B</mi></msub><mo>⌉</mo></mrow><annotation encoding="application/x-tex">n_R = \lceil b/n_B \rceil</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">=</span><span class="mopen">⌈</span><span class="mord mathit">b</span><span class="mord mathrm">/</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose">⌉</span></span></span></span></li>
+</ul>
+</li>
+<li>
+<p>Small example: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi><mo>=</mo><mn>1</mn><mn>0</mn><mn>2</mn><mn>4</mn></mrow><annotation encoding="application/x-tex">b=1024</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">b</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">4</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>B</mi></msub><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">n_B=5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">=</span><span class="mord mathrm">5</span></span></span></span>, need 205 runs of 5 blocks</p>
+</li>
+<li>
+<p>After first pass, have <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">n_R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span> sorted pieces of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">n_B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span> blocks: merge them
+together.</p>
+<ul>
+<li>In-memory mergesort: merge two at a time (two-way merge)</li>
+<li>External sorting: merge as many as possible</li>
+<li>Limiting factor: smaller of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msub><mi>n</mi><mi>B</mi></msub><mo>−</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">(n_B - 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">n_R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.00773em;">R</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h2>Complicated SELECT operation</h2>
+<p>Selecting on many indices simultaneously (where the indices are queries
+together with <code>AND</code> or <code>OR</code>).</p>
+<p>Get the pointers to the different blocks from the secondary indexes of all of
+the queries indices, then… intersect the pointers, <em>then</em> access the blocks.</p>
+<h2>Selectivity estimation</h2>
+<p>Knowing the size of the result of a query without having to carry out the
+query.</p>
+<h4><strong>Lecture 9</strong> – October 26th, 2017</h4>
+<h2>Hands-on projects</h2>
+<ol>
+<li>
+<p><strong>Data Warehousing</strong>: SQL, OLAP, from RDBMS to DWs</p>
+<ul>
+<li>In a data warehouse we have a purpose (e.g. money or sales).</li>
+<li>You will take this normalised DB and will make it a fact-based or
+subject-based table. You will drop some data. You will have a fact
+table with information about sales, which may refer to secondary tables
+with products, customers, or suppliers.</li>
+<li>Instructions given step by step: drop these tables, do this, do that…</li>
+<li>You can use MySQL, PostgreSQL, Oracle, but the queries are done for MS
+SQL Server.</li>
+<li>OLAP: for example, “give me the no. of products sold in the second half
+of this year in region A that weren’t sold in the first half of this year
+in region B.”</li>
+<li>Challenge: data will be missing, e.g. holidays, but they will be queried.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hadoop MapReduce</strong>: Big Data hacking, text analytics</p>
+<ul>
+<li>You will be given a very big data set (and small one for testing). It
+will consist of updates to wiki pages.</li>
+<li>Since it’s big, you can’t use basic C code (or maybe you can).</li>
+<li>Process this data to answer questions, e.g: “who was the most active user
+on wikipedia”? Were they genuine edits or spam? Give the top <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>.</li>
+<li>Or: “what are the articles with the highest number of revisions?”</li>
+<li>Biggest challenge: install Hadoop. Get it running. There is a step-by-
+step instruction paper on how to install it.</li>
+</ul>
+</li>
+<li>
+<p><strong>Column oriented data stores</strong>: Column stores for analytics, bitmaps,
+algorithms</p>
+<ul>
+<li>We care about aggregates (sums, avgs, analysis).</li>
+<li>Project is about storing columns in efficient way.</li>
+<li>Given any DB, how can I store data column-wise?</li>
+<li>Compression: most-famous one, round-length encoding.
+<code>[6, 6, 6, 6, 6, 6, 6]</code> is turned into <code>6 x 7</code>, though that only works
+if the column is compressed.</li>
+<li>It is assumed that the data is compressable. But that may not be the
+case.</li>
+<li>In this project: sort data on one column so that there are sequences
+of repetitions in the data.</li>
+<li>I will give you data, you will take the data and compress it, and I
+will give you the compression codes.</li>
+<li>Don’t spend too much time on details, spend time on creative solutions.</li>
+<li>Complex compression algorithm <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">⇒</span></span></span></span> slow querying. You must
+compress it such that querying is efficient.</li>
+<li>Problem: multiple columns, need to sort it in multidimensional way.</li>
+<li>Provided with 5 data sets, one with 2 million tuples.</li>
+</ul>
+</li>
+</ol>
+<h2>Objectives</h2>
+<ul>
+<li>To get hands-on experience in one of the areas.</li>
+<li>To do something timely, and that you find interesting and stimulating.</li>
+<li>To let you pick something that reflects your interests.</li>
+</ul>
+<h2>Submission Details</h2>
+<ul>
+<li>
+<p>Submission is via Tabula</p>
+<ul>
+<li>Upload a PDF of the report</li>
+<li>Upload a zip of the source code</li>
+</ul>
+</li>
+<li>
+<p>Due <strong>Monday 4th of December (12 noon)</strong></p>
+<ul>
+<li>Usual late scheme applies: loss of 5% of marks per working day late.</li>
+<li>Do make use of books/articles/websites, but cite them properly.</li>
+<li>Don’t copy code.</li>
+</ul>
+</li>
+</ul>
+<h2>Report Format</h2>
+<ul>
+<li>
+<p>Report:</p>
+<ul>
+<li>Max 5 pages (at most 3500 words) for the main part of the report</li>
+<li>Appendix: for detailed query outputs if required by the project
+description.</li>
+</ul>
+</li>
+<li>
+<p>The main part:</p>
+<ul>
+<li>At least 10pt font, “sensible margins” (2cm on all sides)</li>
+<li>Some marks go to presentation.</li>
+<li>Ability to communicate is vital in whatever you go on to do</li>
+<li>Use graphs and diagrams where applicable.</li>
+</ul>
+</li>
+</ul>
+<h2>Suggested Outline</h2>
+<ul>
+<li>Introduction</li>
+<li>
+<p>Description of what you did</p>
+<ul>
+<li>Describe the algorithms and implementations</li>
+<li>Enough detail to allow someone else to repeat the process</li>
+<li>Include what measures you will measure the methods on</li>
+</ul>
+</li>
+<li>
+<p>Results</p>
+<ul>
+<li>Experimental evaluation</li>
+<li>“As the data size increases, I have a linear increase in cost, …”</li>
+<li>For the column compressions project: “as the number of attributes
+increases these methods start to perform worse, but as the number of rows
+increases these methods become more stable.”</li>
+</ul>
+</li>
+<li>
+<p>Conclusions/references</p>
+<ul>
+<li>Include proper references to work you made use of</li>
+<li>What more could you have done if you had more time?</li>
+</ul>
+</li>
+</ul>
+<h2>Evaluation Criteria</h2>
+<ul>
+<li>Quality of solutions and their evaluations [5%]</li>
+<li>Quality of presentation [5%]</li>
+<li>Quality of code, documentation, and instruction [4%]</li>
+<li>Description of the work done and objectives [2%]</li>
+<li>Framing material, references [2%]</li>
+<li>Results and discussion/interpretation [4%]</li>
+</ul>
+<p>Report more important than the project. <strong>Keep that in mind</strong>.</p>
+<h4><strong>Lecture 10</strong> – October 27th, 2017</h4>
+<h2><strong>Implementing JOIN</strong></h2>
+<ul>
+<li>
+<p><strong>Sort-merge join</strong>:</p>
+<ul>
+<li>If <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.00773em;">R</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span> are physically sorted (ordered) by value of the join
+attributes <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span>, respectively, sort-merge join is very efficient.</li>
+<li>Both files are scanned in order of the join attributes, matching the
+records that have the same values for <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hash join</strong>:</p>
+<ul>
+<li>The records of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.00773em;">R</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span> are both hashed with the <em>same hash function</em>
+on the join attributes <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span></span></span></span> of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.00773em;">R</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span> of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span> as hash keys.</li>
+<li>Hash join is very efficient if one of the sets fits into memory.
+Otherwise, bring as much as you can into memory, hash them, write back.
+Then read in the hashed data and join them.</li>
+<li>Cost if files don’t fit into memory: 3 times as many IOs.</li>
+<li>Assumed: your hash function behaves nicely, splits data in uniform
+buckets.</li>
+</ul>
+</li>
+</ul>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/28986567e432af87b92eac6430e9a3b8-c0408.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 580px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 47.06896551724138%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABUUlEQVQoz62RW0+DQBCF+f+/xBffNNHom9U0sfaCirYUyi6U7WKpF6CtlPY4sw2tafTBxEkOYYez35wMFqiG7gCO84TNZsNHvL+9wu7Z1HNw12ojzwvTL8tPSBliPt+e65JCIJ1O8ZHlsFarFdyJhqM0+mqCxWJh1H3uww0jSK0JMDcS9N54dHDr+UjS1PQ0gZrkbTw49P0FFjdbfRfNAYlSzmYzTMl0dHaO08YNHM8zF7Msw4DSGR8pCEMzOIzjXc+P1RbYGwXoBBJdf4R1tYamJMcXlzi5uoZN03lIWZbwxmPjY4koMoMipfY9nWyB94GATdMZmOe5SVhVldlpLfb549j4WJKAnJCBu16S7BN2hUR76CGl3dQ/57A4AftYii6zj5PXe18ul7D4URSFScDpfoPVwA7BOt+Ah2XhDyUJ2BOh0eQ/gCFBbIKxlP4Z+AXAFKgA1BvF/QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Hash join"
+        title=""
+        src="/static/28986567e432af87b92eac6430e9a3b8-3b812.png"
+        srcset="/static/28986567e432af87b92eac6430e9a3b8-73f02.png 148w,
+/static/28986567e432af87b92eac6430e9a3b8-01593.png 295w,
+/static/28986567e432af87b92eac6430e9a3b8-3b812.png 590w,
+/static/28986567e432af87b92eac6430e9a3b8-6ebc5.png 885w,
+/static/28986567e432af87b92eac6430e9a3b8-c0408.png 1160w"
+        sizes="(max-width: 580px) 100vw, 580px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h2><strong>JOIN performance</strong></h2>
+<ul>
+<li>
+<p>Nested-loop join can be very expensive</p>
+</li>
+<li>
+<p>Joining EMPLOYEE and DEPARTMENT, with EMPLOYEE for the outer loop:<br>
+EMPLOYEE read once, DEPARTMENT read <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>b</mi><mi>E</mi></msub><mi mathvariant="normal">/</mi><mo>(</mo><msub><mi>n</mi><mi>B</mi></msub><mo>−</mo><mn>2</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">b_E/(n_B-2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord mathrm">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">−</span><span class="mord mathrm">2</span><span class="mclose">)</span></span></span></span> times.</p>
+<ul>
+<li>Read EMPLOYEE once: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>b</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">b_E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span> blocks</li>
+<li>Read DEPARTMENT <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌈</mo><msub><mi>b</mi><mi>E</mi></msub><mi mathvariant="normal">/</mi><mo>(</mo><msub><mi>n</mi><mi>B</mi></msub><mo>−</mo><mn>2</mn><mo>)</mo><mo>⌉</mo></mrow><annotation encoding="application/x-tex">\lceil b_E/(n_B-2)\rceil</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">⌈</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord mathrm">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">−</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mclose">⌉</span></span></span></span> times: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>b</mi><mi>D</mi></msub><mo>×</mo><msub><mi>b</mi><mi>E</mi></msub><mi mathvariant="normal">/</mi><mo>(</mo><msub><mi>n</mi><mi>B</mi></msub><mo>−</mo><mn>2</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">b_D\times b_E/(n_B-2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">×</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord mathrm">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">−</span><span class="mord mathrm">2</span><span class="mclose">)</span></span></span></span></li>
+<li>In our examples: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mn>0</mn><mn>0</mn><mn>0</mn><mo>+</mo><mn>1</mn><mn>0</mn><mo>×</mo><mn>2</mn><mn>0</mn><mn>0</mn><mn>0</mn><mi mathvariant="normal">/</mi><mn>5</mn><mo>=</mo><mn>6</mn><mn>0</mn><mn>0</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">2000+10\times 2000/5=6000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathrm">2</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mbin">×</span><span class="mord mathrm">2</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">/</span><span class="mord mathrm">5</span><span class="mrel">=</span><span class="mord mathrm">6</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span></span></span></span> block reads.</li>
+</ul>
+</li>
+<li>
+<p>Joining EMPLOYEE and DEPARTMENT, with DEPARTMENT for the outer loop:<br>
+EMPLOYEE read once, DEPARTMENT read <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>b</mi><mi>E</mi></msub><mi mathvariant="normal">/</mi><mo>(</mo><msub><mi>n</mi><mi>B</mi></msub><mo>−</mo><mn>2</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">b_E/(n_B-2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord mathrm">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">−</span><span class="mord mathrm">2</span><span class="mclose">)</span></span></span></span> times.</p>
+<ul>
+<li>Read DEPARTMENT once: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>b</mi><mi>D</mi></msub></mrow><annotation encoding="application/x-tex">b_D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span> blocks</li>
+<li>Read EMPLOYEE <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌈</mo><msub><mi>b</mi><mi>D</mi></msub><mi mathvariant="normal">/</mi><mo>(</mo><msub><mi>n</mi><mi>B</mi></msub><mo>−</mo><mn>2</mn><mo>)</mo><mo>⌉</mo></mrow><annotation encoding="application/x-tex">\lceil b_D/(n_B-2)\rceil</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">⌈</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord mathrm">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">−</span><span class="mord mathrm">2</span><span class="mclose">)</span><span class="mclose">⌉</span></span></span></span> times: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>b</mi><mi>E</mi></msub><mo>×</mo><msub><mi>b</mi><mi>D</mi></msub><mi mathvariant="normal">/</mi><mo>(</mo><msub><mi>n</mi><mi>B</mi></msub><mo>−</mo><mn>2</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">b_E\times b_D/(n_B-2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05764em;">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">×</span><span class="mord"><span class="mord mathit">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord mathrm">/</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mbin">−</span><span class="mord mathrm">2</span><span class="mclose">)</span></span></span></span></li>
+<li>In our examples: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>0</mn><mo>+</mo><mn>2</mn><mn>0</mn><mn>0</mn><mn>0</mn><mo>×</mo><mn>1</mn><mn>0</mn><mi mathvariant="normal">/</mi><mn>5</mn><mo>=</mo><mn>4</mn><mn>0</mn><mn>1</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">10+2000\times 10/5=4010</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mbin">+</span><span class="mord mathrm">2</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mord mathrm">0</span><span class="mbin">×</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">/</span><span class="mord mathrm">5</span><span class="mrel">=</span><span class="mord mathrm">4</span><span class="mord mathrm">0</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span></span></span></span> block reads.</li>
+</ul>
+</li>
+</ul>
+<h2><strong>JOIN selection factor</strong></h2>
+<h2><strong>Sort-merge JOIN efficiency</strong></h2>
+<h2><strong>Partition hash JOIN</strong></h2>
+<h2><strong>PROJECT operation</strong></h2>
+<h2><strong>SET operation</strong></h2>
+<ul>
+<li>Other operations: UNION, INTERSECTION, SET DIFFERENCE. These are easy.
+Sort the data, run the operation.</li>
+</ul>
+<h2><strong>Aggregate operation</strong></h2>
+<ul>
+<li>Aggregates: MIN, MAX, COUNT, AVERAGE, SUM. Keep track of these values and
+update the aggregates on insertion and updates.</li>
+</ul>
+<h2><strong>GROUP BY</strong></h2>
+<ul>
+<li><code>SELECT Dno, AVG(Salary) FROM EMPLOYEE GROUP BY Dno</code><br>
+Apply the aggregate separately to each group of tuples</li>
+</ul>
+<h2><strong>Avoid hitting the disk: pipelining</strong></h2>
+<ul>
+<li>
+<p>It is convenient to think of each operation in isolation.</p>
+<ul>
+<li>Read input from disk, write results to disk.</li>
+</ul>
+</li>
+<li>
+<p>However, this is very slow: very disk intensive.</p>
+</li>
+<li>
+<p>Use pipelining: pass results of one operator directly to the next, like
+unix pipes <code>FIRST QUERY | SECOND QUERY</code></p>
+</li>
+</ul>
+<h2>Example</h2>
+<p><code>SELECT B,D FROM R,S WHERE R.A = "c" AND S.E = 2 AND R.C = S.C</code></p>
+<p><strong>How do we execute query?</strong></p>
+<p><strong>Plan I</strong>: Cartesian product, then selection (may be a large cartesian product)</p>
+<p><strong>Plan II</strong>: Take first table, do a selection, take second table, do a selection,
+then join.</p>
+<h2><strong>Transformation rules for relational algebra</strong></h2>
+<ol>
+<li>
+<p>Cascade of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03588em;">σ</span></span></span></span>. Conjunction of selections can be broken up:<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>σ</mi><mrow><mi>c</mi><mn>1</mn></mrow></msub><msub><mtext> AND </mtext><mrow><mi>c</mi><mn>2</mn></mrow></msub><mtext> AND </mtext><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><msub><mi mathvariant="normal">.</mi><mrow><mi>c</mi><mi>n</mi></mrow></msub><mo>(</mo><mi>R</mi><mo>)</mo><mo>=</mo><mi>s</mi><mi>c</mi><mn>1</mn><mo>(</mo><mi>s</mi><mi>c</mi><mn>2</mn><mo>(</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi>s</mi><mi>c</mi><mi>n</mi><mo>(</mo><mi>R</mi><mo>)</mo><mo>)</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\sigma_{c1} \text{ AND } _{c2} \text{ AND } ... _{cn} (R) = sc1 (sc2 (....scn (R))...))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">c</span><span class="mord mathrm mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord"><span class="mord text"><span class="mord mathrm"> AND </span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">c</span><span class="mord mathrm mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord text"><span class="mord mathrm"> AND </span></span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord"><span class="mord mathrm">.</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">c</span><span class="mord mathit mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">s</span><span class="mord mathit">c</span><span class="mord mathrm">1</span><span class="mopen">(</span><span class="mord mathit">s</span><span class="mord mathit">c</span><span class="mord mathrm">2</span><span class="mopen">(</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathit">s</span><span class="mord mathit">c</span><span class="mord mathit">n</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mclose">)</span><span class="mclose">)</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></p>
+</li>
+<li>
+<p>The s operation is commutative (follows from previous) sc1 (sc2(R)) o sc2 (sc1(R))</p>
+</li>
+<li>
+<p>Cascade of p. Can ignore all but the final projection:
+plist1(plist2(…(plistn(R)…)) o plist1(R)</p>
+</li>
+<li>
+<p>Commuting s with p. If selection only involves attributes in
+the projection list, can swap
+81
+pA1, A2, … , An(sc(R)) o sc(pA1, A2, … , An (R)) CS346 Advanced Databases
+Transformation rules for relational algebra</p>
+</li>
+<li>
+<p>Commutativity of ⋈ (and  ́): Join (cartesian product) commutes R⋈cS=S⋈c R and R ́S=S ́R</p>
+</li>
+<li>
+<p>Commuting s with ⋈ (or  ́):
+If all attributes in selection condition c are in only one relation (say, R) then sc( R⋈S ) o (sc(R))⋈S
+Ifccanbewrittenas(c1 ANDc2)wherec1 isonlyonR,andc2 is only on S, then sc( R ⋈ S ) o (sc1(R)) ⋈ (sc2(S))</p>
+</li>
+<li>
+<p>Commuting p with ⋈ ( ́): Write projection list L={A1…An,B1… Bn} where A’s are attributes of R, B’s are attributes of S.
+If join condition c involves only attributes in L, then:
+pL(R ⋈c S) o ( pA1,…An(R)) ⋈c (pB1,…Bn(S))
+Can also allow join on attributes not in L with an extra projection
+82
+CS346 Advanced Databases
+Transformation rules for relational algebra</p>
+</li>
+<li>
+<p>Commutativity of set operators
+Operations È and Ç are commutative ( / is not)</p>
+</li>
+<li>
+<p>Associativity of ⋈,  ́, È, Ç
+These operations are individually associative:
+(R q S) q T = R q (S q T) where q is the same op throughout</p>
+</li>
+<li>
+<p>Commuting s with set operations scommuteswithÈ,Çand/:sc (rqS)o(sc(R))q(sc(S))</p>
+</li>
+<li>
+<p>The p operation commutes with È: pL(R È S) o (pL(R)) È (pL(S))</p>
+</li>
+<li>
+<p>Converting a (s,  ́) sequence into a ⋈
+If the condition c of selection s following a  ́ corresponds to a join condition, then: (sc(R  ́ S)) o (R ⋈c S)</p>
+</li>
+</ol></div></div></div></div></body></html>

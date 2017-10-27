@@ -1,15 +1,182 @@
 <!DOCTYPE html>
- <html lang="en"><head><meta charSet="utf-8" /><meta httpEquiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="preload" href="/component---src-layouts-index-js-94b2668044ac8de2feaf.js" as="script" /><link rel="preload" href="/component---src-templates-post-js-f11b9c4a042153a3ab99.js" as="script" /><link rel="preload" href="/path---cs-325-b152b4fb2895acad5a56.js" as="script" /><link rel="preload" href="/app-fff8d1a132829e9f40b0.js" as="script" /><link rel="preload" href="/commons-53fb0be53ed5caeb5d53.js" as="script" /><script id="webpack-manifest">
+ <html lang="en"><head><meta charSet="utf-8" /><meta httpEquiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="preload" href="/component---src-layouts-index-js-94b2668044ac8de2feaf.js" as="script" /><link rel="preload" href="/component---src-templates-post-js-f11b9c4a042153a3ab99.js" as="script" /><link rel="preload" href="/path---cs-325-05a2f40985d6934b9221.js" as="script" /><link rel="preload" href="/app-3ea84766c7d3a5553080.js" as="script" /><link rel="preload" href="/commons-53fb0be53ed5caeb5d53.js" as="script" /><script id="webpack-manifest">
             //<![CDATA[
-            window.webpackManifest = {"231608221292675":"app-fff8d1a132829e9f40b0.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-2b47fdff36c5405a8480.js","195351340454287":"component---src-templates-post-js-f11b9c4a042153a3ab99.js","60335399758886":"path----35d3519705bdcd4a2f23.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","81904240485990":"path---cs-342-b0fced303a19d7bbc13b.js","257411701174131":"path---cs-346-111f395ee57b32a3b79a.js","74901329180841":"path---cs-325-b152b4fb2895acad5a56.js","252209533791401":"path---st-301-421b3da8a072f2309012.js","168273874657437":"path---cs-301-621cf1a456f8f3373bbf.js","114294042200911":"path---cs-356-6c77e8dce766660baa7a.js","114276838955818":"component---src-layouts-index-js-94b2668044ac8de2feaf.js"}
+            window.webpackManifest = {"231608221292675":"app-3ea84766c7d3a5553080.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-2b47fdff36c5405a8480.js","195351340454287":"component---src-templates-post-js-f11b9c4a042153a3ab99.js","60335399758886":"path----35d3519705bdcd4a2f23.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","81904240485990":"path---cs-342-b0fced303a19d7bbc13b.js","257411701174131":"path---cs-346-3d854567705df8d1ff35.js","74901329180841":"path---cs-325-05a2f40985d6934b9221.js","252209533791401":"path---st-301-421b3da8a072f2309012.js","168273874657437":"path---cs-301-621cf1a456f8f3373bbf.js","114294042200911":"path---cs-356-6c77e8dce766660baa7a.js","152063887477752":"path---project-spec-4c40c5ac5373c592475a.js","82289178807862":"path---project-1b25ae2d6686a9fd906c.js","114276838955818":"component---src-layouts-index-js-94b2668044ac8de2feaf.js"}
             //]]>
-            </script><title data-react-helmet>CS325 Compiler Design | Notes</title><link data-react-helmet rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css" integrity="sha384-B41nY7vEWuDrE9Mr+J2nBL0Liu+nl/rBXTdpQal730oTHdlrlXHzYMOhDU60cwde" crossorigin="anonymous" /><meta data-react-helmet name="description" content="Lecture 1 October 4th, 2017 Missed… Lecture 2 October 6th, 2017 Slides" /><script data-react-helmet src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js" integrity="sha384-L9gv4ooDLrYwW0QCM6zY3EKSSPrsuUncpx26+erN0pJX4wv1B1FzVW1SvpcJPx/8" crossorigin="anonymous"></script><script>
+            </script><title data-react-helmet>CS325 Compiler Design | Notes</title><link data-react-helmet rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css" integrity="sha384-B41nY7vEWuDrE9Mr+J2nBL0Liu+nl/rBXTdpQal730oTHdlrlXHzYMOhDU60cwde" crossorigin="anonymous" /><meta data-react-helmet name="description" content="Lecture 1  – October 4th, 2017 Missed… Lecture 2  – October 6th, 2017 Part 1  Lexical Analyzer (Lexing) Slides Lecture 3  – October 9th…" /><script data-react-helmet src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js" integrity="sha384-L9gv4ooDLrYwW0QCM6zY3EKSSPrsuUncpx26+erN0pJX4wv1B1FzVW1SvpcJPx/8" crossorigin="anonymous"></script><script>
   !function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",[
-  "/commons-53fb0be53ed5caeb5d53.js","/app-fff8d1a132829e9f40b0.js","/path---cs-325-b152b4fb2895acad5a56.js","/component---src-templates-post-js-f11b9c4a042153a3ab99.js","/component---src-layouts-index-js-94b2668044ac8de2feaf.js"
+  "/commons-53fb0be53ed5caeb5d53.js","/app-3ea84766c7d3a5553080.js","/path---cs-325-05a2f40985d6934b9221.js","/component---src-templates-post-js-f11b9c4a042153a3ab99.js","/component---src-layouts-index-js-94b2668044ac8de2feaf.js"
 ])
-  </script><style id="gatsby-inlined-css">.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.namespace{opacity:.7}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers{padding-left:0}pre[class*=language-].line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}@font-face{font-family:PT Mono;font-style:normal;font-weight:400;src:"PT Mono",url(/static/pt-mono.9423a5ee.woff2) format("woff2")}@font-face{font-family:Benton Sans;font-style:normal;font-weight:400;src:url(/static/benton-sans-book.240cae2e.woff2) format("woff2")}@font-face{font-family:Benton Sans;font-style:normal;font-weight:700;src:url(/static/benton-sans-bold.ee689461.woff2) format("woff2")}body,p{font-family:Helvetica Neue,Helvetica,sans-serif}h1,h2,h3,h4,h5,h6{font-family:Benton Sans;margin:0;padding:16px 0;font-weight:400}div#sticky-header{-webkit-transform:translateZ(0);position:fixed;min-width:100%;z-index:1000;overflow:hidden;height:0;background-color:#fff}code{font-family:PT Mono,monospace}.main{max-width:7200px;margin:0 auto;padding:0 20px}.katex-display{font-size:1.2em}</style></head><body><div id="___gatsby"><div class="main"><div id="sticky-header"></div><div><h4>CS325 Compiler Design</h4><div><h1>Lecture 1</h1>
-<p><em>October 4th, 2017</em></p>
+  </script><style id="gatsby-inlined-css">.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#7d8b99}.token.punctuation{color:#5f6364}.token.boolean,.token.constant,.token.deleted,.token.function-name,.token.number,.token.property,.token.symbol,.token.tag{color:#c92c2c}.token.attr-name,.token.builtin,.token.char,.token.function,.token.inserted,.token.selector,.token.string{color:#2f9c0a}.token.entity,.token.operator,.token.url,.token.variable{color:#a67f59}.token.atrule,.token.attr-value,.token.class-name,.token.keyword{color:#1990b8}.token.important,.token.regex{color:#e90}.language-css .token.string,.style .token.string{color:#a67f59}.token.important{font-weight:400}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.namespace{opacity:.7}.token.cr:before,.token.lf:before,.token.tab:not(:empty):before{color:#e0d7d1}pre[class*=language-].line-numbers{padding-left:0}pre[class*=language-].line-numbers code{padding-left:3.8em}pre[class*=language-].line-numbers .line-numbers-rows{left:0}pre[class*=language-][data-line]{padding-top:0;padding-bottom:0;padding-left:0}pre[data-line] code{position:relative;padding-left:4em}pre .line-highlight{margin-top:0}@font-face{font-family:PT Mono;font-style:normal;font-weight:400;src:"PT Mono",url(/static/pt-mono.9423a5ee.woff2) format("woff2")}@font-face{font-family:Plantin;font-style:normal;font-weight:400;src:url(/static/plantin.8ee3edfc.woff) format("woff"),url(/static/plantin.a97b6ae6.woff2) format("woff2")}@font-face{font-family:Plantin;font-style:normal;font-weight:700;src:url(/static/plantin-bold.daf38c6f.woff) format("woff"),url(/static/plantin-bold.969598bb.woff2) format("woff2")}@font-face{font-family:Plantin;font-style:italic;font-weight:400;src:url(/static/plantin-italic.760a46fb.woff) format("woff"),url(/static/plantin-italic.3d4e41ba.woff2) format("woff2")}@font-face{font-family:Plantin;font-style:italic;font-weight:700;src:url(/static/plantin-bold-italic.9b849da4.woff) format("woff"),url(/static/plantin-bold-italic.5326000f.woff2) format("woff2")}@font-face{font-family:Benton Sans;font-style:normal;font-weight:400;src:url(/static/benton-sans-book.240cae2e.woff2) format("woff2")}@font-face{font-family:Benton Sans;font-style:normal;font-weight:700;src:url(/static/benton-sans-bold.ee689461.woff2) format("woff2")}body,p{font-family:Plantin,serif}h1,h2,h3,h4,h5,h6{font-family:Helvetica Neue,Helvetica,sans-serif;margin:0;padding:16px 0;font-weight:400}div#sticky-header{-webkit-transform:translateZ(0);position:fixed;min-width:100%;z-index:1000;overflow:hidden;height:0;background-color:#fff}code{font-family:PT Mono,monospace}.main{max-width:7200px;margin:0 auto;padding:0 20px;margin-bottom:600px}.katex-display{font-size:1.2em}</style></head><body><div id="___gatsby"><div class="main"><div id="sticky-header"></div><div><h4>CS325 Compiler Design</h4><div><h4><strong>Lecture 1</strong> – October 4th, 2017</h4>
 <p>Missed…</p>
-<h1>Lecture 2</h1>
-<p><em>October 6th, 2017</em></p>
-<p><a href="/e1bd2e36a9362af389447cc833684266.pdf">Slides</a></p></div></div></div></div></body></html>
+<h4><strong>Lecture 2</strong> – October 6th, 2017</h4>
+<h2><strong>Part 1</strong> Lexical Analyzer (Lexing)</h2>
+<p><a href="/e1bd2e36a9362af389447cc833684266.pdf">Slides</a></p>
+<h4><strong>Lecture 3</strong> – October 9th, 2017</h4>
+<h2>DFA to minimal DFA: Hopcroft’s algorithm</h2>
+<ol>
+<li>Given <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.02778em;">D</span></span></span></span> states in the DFA partition the states into two groups – <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.13889em;">F</span></span></span></span> and
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>−</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">S-F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">−</span><span class="mord mathit" style="margin-right:0.13889em;">F</span></span></span></span>, the <em>accepting states</em> and the <em>nonaccepting states</em>. Denote this
+initial partitioning as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>=</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">P = F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>−</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">S-F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">−</span><span class="mord mathit" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+<li>Let new partitioning <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mrow><mi>n</mi><mi>e</mi><mi>w</mi></mrow></msub><mo>=</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">P_{new} = P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mord mathit mtight">e</span><span class="mord mathit mtight" style="margin-right:0.02691em;">w</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span><br>
+For each group <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">G</span></span></span></span> in <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mrow><mi>n</mi><mi>e</mi><mi>w</mi></mrow></msub></mrow><annotation encoding="application/x-tex">P_{new}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mord mathit mtight">e</span><span class="mord mathit mtight" style="margin-right:0.02691em;">w</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span><br>
+partition into subgroups such that two states <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">s</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">t</span></span></span></span> are in the same
+subgroup if and only if for all input symbols <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">a</span></span></span></span></li>
+</ol>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/1b55b96245e48d1beff3d36cb866a884-61c4d.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 259px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 62.54826254826254%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABl0lEQVQ4y41T2Y7CMAzk/3+MF8TbqogWChToRe/79HrcKlu6QruWIoidTGbG7oY+RBmGlHmeWl1d039is07kvk+p41DfNLKPomh6gH9T26a2LP8PGD8e1Let2idJIquZwRFFEFDFuT8BU8eloeveioZh0IMf6VZ5qOgWj/wCHIeBMtd9KwBE13WyLEtWswKALR8BYfo4jioZsKw0TSfvZs+qqpJczc0J0bCZANjiP0i9AS6ZxXGs9s6KCZgC2L/dKHk+aeh7IROzCgEEg9vhIEmAJSvDn3xJbFkoQHinE724VhSFsG55oWEbJC6mSdp+T+fzmfI8J5clQPbxeCSTa8ihOR4rwRmbx8fc7cRbnNE0TR6GUtXlgIvB6/UzHvwQLm+3WzkM9pAKUI/lRrNEnMM0+PByCShzaN3V6BRFqZognvEFXI6ZfcUe57wgGc1C9G03SV63HR3DSORZRkvXaga1mUnELIIgFKCEbUBTJjJzU652RroVkxuWdLondHdzujoZaV8XuhqW+pYbZocAQL2YSakvxuYbvQnuBMLjwv8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="DFA partitions"
+        title=""
+        src="/static/1b55b96245e48d1beff3d36cb866a884-61c4d.png"
+        srcset="/static/1b55b96245e48d1beff3d36cb866a884-88efc.png 148w,
+/static/1b55b96245e48d1beff3d36cb866a884-c7dd2.png 295w,
+/static/1b55b96245e48d1beff3d36cb866a884-61c4d.png 518w"
+        sizes="(max-width: 259px) 100vw, 259px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h2><strong>Part 2</strong> Syntax Analyzer (Parsing)</h2>
+<h3>Overview</h3>
+<ul>
+<li>
+<p>Context free grammars (CFGs) – formal mechanism for</p>
+<ul>
+<li>specifying the syntax of the source language and</li>
+<li>a systematic method of determining membership in this formally specified
+language</li>
+<li>we use context-free grammars to specify the grammatical structure of
+programming languages.</li>
+</ul>
+</li>
+<li>
+<p>Algorithms for doing this:</p>
+<ul>
+<li>Top-down parsing – <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>L</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">LL(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">L</span><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span> and recursive descent parsers.</li>
+<li>Bottom-up parsing – <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>R</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">LR(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">L</span><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span> parsers, canonical <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>R</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">LR(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">L</span><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mclose">)</span></span></span></span> parsers, LALR parser.</li>
+</ul>
+</li>
+</ul>
+<p>Regular expressions are not sufficiently powerful to represent context-free
+structures. It doesn’t understand recursion, for example.</p>
+<h2>Context Free Grammars (CFGs)</h2>
+<h3>Formally</h3>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span> – A set of <em>terminal symbols</em></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">NT</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span> – A set of <em>nonterminals</em></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span> – A designation of one of the nonterminals as the <em>start symbol</em></li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> – A set of <em>productions</em>, where each production consists of a
+nonterminal, called the <em>head or left side</em> of the production, an
+arrow and a sequence of terminals and/or nonterminal, called the
+<em>body or right side</em> of the production.</li>
+</ul>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/832fafd9fb0556f2178062932c13955c-df6fe.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 469px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 30.2771855010661%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA4UlEQVQY052QzY7DIAyE8/5P10svbRo2kNBANqmyCyGQn1kbdaVe25FGsrD8MXaxbRu6zsAYi2VZsMSY6972GMcHeczvcZ7hhgFhmnAcB/wckNaVejGbOawipYTyWqKqBJz3mGlQUM3Qafp5AiN+rYU6naDPZ4yqQSUUrrcatbrjUn7hJiTuXY9i33c459G2bQZ6AkqpMAwjDEH4Q5Z/UFqlYMuSknLvG6Ju0GiDVxX/hZQS3tNazkEIAUsrc8qUVryjDIx0N0VrzCEgkLXWlFgT1ObeW0A+MA+Z5zCb032qP4HFzvXnmzuRAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Context free grammar"
+        title=""
+        src="/static/832fafd9fb0556f2178062932c13955c-ed4a0.png"
+        srcset="/static/832fafd9fb0556f2178062932c13955c-c6b11.png 148w,
+/static/832fafd9fb0556f2178062932c13955c-35ff1.png 295w,
+/static/832fafd9fb0556f2178062932c13955c-ed4a0.png 590w,
+/static/832fafd9fb0556f2178062932c13955c-afb00.png 885w,
+/static/832fafd9fb0556f2178062932c13955c-df6fe.png 938w"
+        sizes="(max-width: 469px) 100vw, 469px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h3>Backus-Naur form (<strong>BNF</strong>)</h3>
+<div class="gatsby-highlight">
+      <pre class="language-none"><code>&lt;SheepNoise&gt; ::= baa &lt;SheepNoise&gt;
+               | baa</code></pre>
+      </div>
+<ul>
+<li>Nonterminal symbols wrapped in angle brackets <code>&#x3C;SheepNoise></code></li>
+<li>Terminal symbols underlined.</li>
+<li>The symbol <code>::=</code> means “derives,” and the symbol <code>|</code> means “also derives“</li>
+</ul>
+<h3>Ambiguous Grammars</h3>
+<p>Consider the grammar: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>→</mo><mi>E</mi><mo>+</mo><mi>E</mi><mi mathvariant="normal">∣</mi><mi>E</mi><mo>∗</mo><mi>E</mi><mi mathvariant="normal">∣</mi><mo>(</mo><mi>E</mi><mo>)</mo><mi mathvariant="normal">∣</mi><mtext>id</mtext></mrow><annotation encoding="application/x-tex">E \rightarrow E + E | E \ast E | (E) | \text{id}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mord mathrm">∣</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mbin">∗</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mord mathrm">∣</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mclose">)</span><span class="mord mathrm">∣</span><span class="mord text"><span class="mord mathrm">id</span></span></span></span></span></p>
+<p>Now consider the input: <code>id * id + id</code></p>
+<p>This input can be derived in two different ways:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/df39d7b80a17d4c7dceeb81cbc9cd5e3-ae6cf.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 528px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 27.651515151515156%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA0UlEQVQY041Ryw6CMBDs/3+biRo96M0Xb1Cg9AWEcbcGFPHgXLbZzsxOt6Lve/wC96u6WfR+QWkNa50/i1uYQDZqRnCuJZKB1hba2Kl/DeIF19B9WUkytLCkE2lW4HQJvckITsZGwzB4wYggShBQgK57J9U02FfiKWUgVus91ruDn86oZeNJXNmseFSTeLs/YvPBZSRpjkdZe0PWiPM1pMkp4iSHoT1oY3z0sqoXu+J0l1uELL+jUXr2bOsc7jRcfIsM7aJtO0ip8C/4Q1z72vsTJhrTM2peXosAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Ambiguous Grammars"
+        title=""
+        src="/static/df39d7b80a17d4c7dceeb81cbc9cd5e3-67096.png"
+        srcset="/static/df39d7b80a17d4c7dceeb81cbc9cd5e3-6d88e.png 148w,
+/static/df39d7b80a17d4c7dceeb81cbc9cd5e3-bd048.png 295w,
+/static/df39d7b80a17d4c7dceeb81cbc9cd5e3-67096.png 590w,
+/static/df39d7b80a17d4c7dceeb81cbc9cd5e3-6aec5.png 885w,
+/static/df39d7b80a17d4c7dceeb81cbc9cd5e3-ae6cf.png 1056w"
+        sizes="(max-width: 528px) 100vw, 528px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h4><strong>Lecture 4</strong> – October 12th, 2017</h4>
+<h4><strong>Lecture 5</strong> – October 13th, 2017</h4>
+<h4><strong>Lecture 6</strong> – October 16th, 2017</h4>
+<h4><strong>Lecture 7</strong> – October 19th, 2017</h4>
+<h4><strong>Lecture 8</strong> – October 20th, 2017</h4>
+<h4><strong>Lecture 9</strong> – October 23rd, 2017</h4></div></div></div></div></body></html>
