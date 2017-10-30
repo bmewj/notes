@@ -11,6 +11,8 @@ tags:
 
 - [`CS325` Compiler Design](/cs325/)
 
+- [`CS324` Computer Graphics](/cs324/)
+
 - [`CS346` Advanced Databases](/cs346/)
 
 - [`ST301` Bayesian Statistics and Decision Theory](/st301/)

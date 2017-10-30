@@ -1,9 +1,9 @@
 body, p {
-  font-family: 'Plantin', serif;
+  font-family: 'CM Serif', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'CM Bright', sans-serif;
   margin: 0;
   padding: 16px 0;
   font-weight: normal;
@@ -20,7 +20,7 @@ div#sticky-header {
 }
 
 code {
-  font-family: 'PT Mono', monospace;
+  font-family: 'CM Typewriter', monospace;
 }
 
 .main {

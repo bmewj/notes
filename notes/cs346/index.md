@@ -502,6 +502,9 @@ query.
    - Or: "what are the articles with the highest number of revisions?"
    - Biggest challenge: install Hadoop. Get it running. There is a step-by-
      step instruction paper on how to install it.
+   - Note: using Hadoop on your own machine allows you to gauge the
+     performance better, since you have complete control over your threads
+     (i.e. fewer context switches).
 
 3. **Column oriented data stores**: Column stores for analytics, bitmaps,
    algorithms
@@ -666,16 +669,18 @@ then join.
 ## **Transformation rules for relational algebra**
 
 1. Cascade of $\sigma$. Conjunction of selections can be broken up:  
-   $\sigma_{c1} \text{ AND } _{c2} \text{ AND } ... _{cn} (R) = sc1 (sc2 (....scn (R))...))$
+   $\sigma_{c1} \text{ AND } _{c2} \text{ AND } ... _{cn} (R) = \sigma_{c1}
+   (\sigma_{c2}(...\sigma_{cn} (R))...))$
 
-2. The s operation is commutative (follows from previous) sc1 (sc2(R)) o sc2 (sc1(R))
-3. Cascade of p. Can ignore all but the final projection:
-plist1(plist2(...(plistn(R)...)) o plist1(R)
-4. Commuting s with p. If selection only involves attributes in
-the projection list, can swap
-81
-pA1, A2, ... , An(sc(R)) o sc(pA1, A2, ... , An (R)) CS346 Advanced Databases
- Transformation rules for relational algebra
+2. The $\sigma$ operation is commutative (follows from previous) $\sigma_{c1}
+   (\sigma_{c2}(R)) \text{ o } \sigma_{c2} (\sigma_{c1}(R))$
+
+3. Cascade of $p$. Can ignore all but the final projection:
+   $\text{plist}_1(\text{plist}_2(...(\text{plist}_n(R)...)) \text{ o }
+   \text{plist}_1(R)$
+
+4. Commuting $\sigma$ with $p$. If selection only involves attributes in
+the projection list, can swap pA1, A2, ... , An(sc(R)) o sc(pA1, A2, ... , An (R))
 5. Commutativity of ⋈ (and  ́): Join (cartesian product) commutes R⋈cS=S⋈c R and R ́S=S ́R
 6. Commuting s with ⋈ (or  ́):
 If all attributes in selection condition c are in only one relation (say, R) then sc( R⋈S ) o (sc(R))⋈S
@@ -696,3 +701,22 @@ These operations are individually associative:
 11. The p operation commutes with È: pL(R È S) o (pL(R)) È (pL(S))
 12. Converting a (s,  ́) sequence into a ⋈
 If the condition c of selection s following a  ́ corresponds to a join condition, then: (sc(R  ́ S)) o (R ⋈c S)
+
+#### **Lecture 11** – October 30th, 2017
+
+## Example cost estimates for SELECT
+
+Conjunctive selection: run the most selective query, then check the others.
+
+Query optimizer finds possible strategies, estimates cost of each.
+
+Usually you pick using an index over sequential scan. But if you're doing a
+range query, even a selective one, on a secondary index, you might end up
+being slower than a linear scan. This would be due to the random IOs that
+you end up doing when using the secondary index.
+
+**Running hints in SQL**: I know that this is a very rare value, so definitely
+use the index and don't estimate the query.
+
+- To estimate cost of `JOIN`, need to know how many tupled result.
+  - Store as a selectivity ratio: size of join to size of cartesian product.
