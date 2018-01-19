@@ -720,3 +720,136 @@ use the index and don't estimate the query.
 
 - To estimate cost of `JOIN`, need to know how many tupled result.
   - Store as a selectivity ratio: size of join to size of cartesian product.
+
+#### **Lecture n** – November 13th, 2017
+
+## Using MapReduce as a relational database
+
+- **Selection**  
+  - Mapper checks if the condition is met.
+
+- **Projection**
+  - Mapper maps the tuples to a tuple with just the columns you want.
+
+- **Group-by**
+  - Mapper maps tuples to key-value pairs. Reducer combines key-value pairs with the
+    same keys into a list.
+
+  - Example, you have `(url, time)` tuples, what's the average load time for each url?
+
+  - In SQL: `SELECT url, AVG(time) FROM visits GROUP BY url`
+  - In MapReduce:
+      - Map over tuples, emit time, keyed by url
+      - MapReduce automatically groups by keys
+      - Compute average in reducer
+      - Optimize with combiners
+      - Not possible to put averages directly, so put `(sum, N)` tuples.
+
+- **Reduce-side Join**
+  - Mapper maps both tables to key-value pairs with the key being the join attribute.
+  - Reducer combines the key-valued pairs into the result.
+  - Everything is done for us in the shuffle phase.
+
+- **Map-side Join**
+  - If the tables are sorted and partitioned by the join key.
+  - Then you can line the two tables up and do the join in parallel.
+
+- **In-memory Join**
+  - Run a hash on the small file and place it in the memory of every node. Alternatively,
+    you can get each node to hash the small file.
+  - In the map phase each node will map their tuples onto their hash table of the small
+    files.
+
+### Summary
+
+- MapReduce can be used to carry out selection, projection, group-bys, and joins.
+- Multiple strategies for relational joins
+  - Prefer in-memory over map-side over reduce-side.
+  - Reduce-side is most general, in-memory is most optimal.
+
+## **HBase**
+
+HBase (Hadoop Database) is a distributed database that makes small queries fast. It's
+much faster than traditional Hadoop operations.
+
+- Suitable for sparse data, with a lot of attributes that are often null.
+
+- The HBase data model is similar to the relational model:
+  - Data is stored in tables, which have rows
+  - Each row is identifier/referenced by a unique key value
+  - Rows have columns, grouped into column families.
+
+- Data (bytes) is stored in cells
+  - Each cell is identified by (row, column-family, column)
+  - Limited support for secondary indexes on non-key values
+  - Cell contents are **versioned**.
+
+- Data is stored in **Hfiles**, usually under HDFS.
+  - Empty cells are not explicitly stored – allows for very sparse data.
+
+#### **Lecture n** – November 20th, 2017
+
+Database Transactions:
+
+A set of operations that must be carried out together. Nothing else can happen in the mean time.
+
+Transaction processing:
+
+Transaction (T1)
+
+```
+read_item(X);
+X := X - N;
+write_item(X);
+read_item(Y);
+Y := Y + N;
+write_item(Y);
+```
+
+Transaction (T2)
+
+```
+read_item(X);
+X := X + M;
+write_item(X);
+```
+
+(T1) `r(X); w(X); r(Y); w(Y); c`  
+(T2) `r(X); w(X); c`
+
+**Solution 1**
+- Serial execution of T1 and T2:  
+  $r_1(X); w_1(X); r_1(Y); w_1(Y); c_1; r_2(X); w_2(X); c_2$.
+- This is slow, but always correct.
+
+**Solution 2**
+- Interleaved execution of T1 and T2:  
+  $r_1(X); r_2(X); w_1(X); r_1(Y); w_2(X); c_2; w_1(Y); c_1$.
+- This may not be correct.
+
+The transaction processor takes many transactions and interleaves them properly.
+
+- **Atomicity**: a transaction either commits or aborts. All steps are carried out or none of them are.
+- **Consistency**: transactions should preserve database consistency.
+- **Isolation**: every transaction is carried out as if its carried out in isolation.
+- **Durability**: aborting a transaction will not lead to committed changes being lost.
+
+**How to enforce atomicity and durability**: if a transaction fails after some operation, it must be undone. Roll-back the earlier operations using systems log. All changes are written to logs.
+
+**Things in a log:**
+- `[start_transaction, T]` T is a unique transaction id.
+- `[write_item, T, X, old_value, new_value]` Transaction T affects item X.
+- `[read_item, T, X]` Transaction T reads item X.
+- `[commit, T]` Transaction has been completed.
+- `[abort, T]` Transaction has been aborted.
+
+**Commit points** mark successful completion of transactions. If a system failure occurs, find all transactions T that have started but have not been committed. Roll back their associated operations to undo their effect.
+
+To enforce durability: transactions can **only commit after** the commit of every transaction from which they read. This can cause cascading aborts. This can be avoided by enforcing the rule: **read only committed data**.
+
+To produce a valid interleaved schedule, the scheduler has to build a schedule that is equivalent to any serial schedule of transactions. It places the conflicting operations in the same order, and does not reorder them. For non-conflicting operations we don't care.
+
+If there is a cycle in the dependency graph of transactions, then there is not serialisable execution possible.
+
+#### **Lecture n** – November 24th, 2017
+

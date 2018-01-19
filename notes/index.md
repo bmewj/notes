@@ -22,3 +22,5 @@ tags:
 - [`CS342` Machine Learning](/cs342/)
 
 - [`CS356` Approximation and Randomised Algorithms](/cs356/)
+
+- [`CS313` Mobile Robotics](/cs313/)
