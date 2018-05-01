@@ -5,16 +5,16 @@
       "path---cs-324-70b1ba16ae7f3567c8f1.js.map"
     ],
     "path---": [
-      "path----d840d4cdbda9cfc489bc.js",
-      "path----d840d4cdbda9cfc489bc.js.map"
+      "path----60561b1c1217b4bdaf75.js",
+      "path----60561b1c1217b4bdaf75.js.map"
     ],
     "path---cs-325": [
       "path---cs-325-05a2f40985d6934b9221.js",
       "path---cs-325-05a2f40985d6934b9221.js.map"
     ],
     "path---cs-342": [
-      "path---cs-342-b0fced303a19d7bbc13b.js",
-      "path---cs-342-b0fced303a19d7bbc13b.js.map"
+      "path---cs-342-cfb4e211e6a75514b01e.js",
+      "path---cs-342-cfb4e211e6a75514b01e.js.map"
     ],
     "path---project": [
       "path---project-1b25ae2d6686a9fd906c.js",
@@ -24,13 +24,25 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-2b47fdff36c5405a8480.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-2b47fdff36c5405a8480.js.map"
     ],
+    "path---research": [
+      "path---research-e2970d415ddd874e83d0.js",
+      "path---research-e2970d415ddd874e83d0.js.map"
+    ],
+    "path---cs-313": [
+      "path---cs-313-bfe21839d62b88756613.js",
+      "path---cs-313-bfe21839d62b88756613.js.map"
+    ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-94b2668044ac8de2feaf.js",
-      "component---src-layouts-index-js-94b2668044ac8de2feaf.js.map"
+      "component---src-layouts-index-js-78e44fc6803578e4630f.js",
+      "component---src-layouts-index-js-78e44fc6803578e4630f.js.map"
     ],
     "path---cs-356": [
-      "path---cs-356-6c77e8dce766660baa7a.js",
-      "path---cs-356-6c77e8dce766660baa7a.js.map"
+      "path---cs-356-ffe95af77a68a3068841.js",
+      "path---cs-356-ffe95af77a68a3068841.js.map"
+    ],
+    "path---cs-356-revision-checklist": [
+      "path---cs-356-revision-checklist-1b15dfac29fb0d5fd644.js",
+      "path---cs-356-revision-checklist-1b15dfac29fb0d5fd644.js.map"
     ],
     "path---project-spec": [
       "path---project-spec-4c40c5ac5373c592475a.js",
@@ -53,18 +65,18 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-f5033dee4a88e594efeb.js",
+      "app-80f1ce0204fad23f72fb.js",
       "build-js-styles.css",
-      "app-f5033dee4a88e594efeb.js.map",
+      "app-80f1ce0204fad23f72fb.js.map",
       "build-js-styles.css.map"
     ],
     "path---st-301": [
-      "path---st-301-421b3da8a072f2309012.js",
-      "path---st-301-421b3da8a072f2309012.js.map"
+      "path---st-301-8030b86a3b10e6c4d9af.js",
+      "path---st-301-8030b86a3b10e6c4d9af.js.map"
     ],
     "path---cs-346": [
-      "path---cs-346-bc9c579f9f170fcbdd5c.js",
-      "path---cs-346-bc9c579f9f170fcbdd5c.js.map"
+      "path---cs-346-53d588f67bd7729a2f8d.js",
+      "path---cs-346-53d588f67bd7729a2f8d.js.map"
     ]
   }
 }
